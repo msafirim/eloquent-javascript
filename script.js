@@ -1,1 +1,1 @@
-confirm("Shall we, then?");
+prompt("Tell us everything you know.", "...");
