@@ -1,7 +1,4 @@
 var result = 1;
-var counter = 0;
-while (counter < 10) {
+for (var counter = 0; counter < 10; counter = counter + 1)
   result = result * 2;
-  counter = counter + 1;
-}
 alert(result);
