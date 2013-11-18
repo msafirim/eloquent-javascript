@@ -1,3 +1,2 @@
-
-alert((4 >= 6 || "grass" != "green") &&
-   !(12 * 2 == 144 && true));
+var caught = 5 * 5;
+alert(caught);
