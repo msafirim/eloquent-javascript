@@ -1,2 +1,2 @@
 
-alert(3 > 2);
+alert("Aardvark" < "Zoroaster");
