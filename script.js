@@ -1,2 +1,2 @@
 
-alert("A newline character is written like \"\\n\".");
+alert(typeof 4.5);
