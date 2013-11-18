@@ -1,2 +1,2 @@
-var caught = 5 * 5;
-alert(caught);
+var luigiDebt = 140;
+alert(luigiDebt = luigiDebt - 35);
