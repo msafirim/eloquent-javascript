@@ -1,4 +1,4 @@
-var result = 1;
-for (var counter = 0; counter < 10; counter = counter + 1)
-  result = result * 2;
-alert(result);
+for (var counter = 0; counter < 20; counter++) {
+  if (counter % 3 == 0 && counter % 4 == 0)
+    alert(counter);
+}
