@@ -1,2 +1,2 @@
 
-alert("Aardvark" < "Zoroaster");
+alert(true || false);
