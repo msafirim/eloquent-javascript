@@ -1,2 +1,1 @@
-var luigiDebt = 140;
-alert(luigiDebt = luigiDebt - 35);
+alert(Math.min(2, 4) + 100);
