@@ -1,2 +1,2 @@
 
-alert("This is the first line\nAnd this is the second");
+alert("A newline character is written like \"\\n\".");
