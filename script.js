@@ -1,2 +1,2 @@
 
-alert(115 * 4 - 4 + 88 / 2);
+alert("Patch my boat with chewing gum.");
