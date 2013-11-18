@@ -1,2 +1,2 @@
 
-alert(typeof 4.5);
+alert(- (10 - 2));
