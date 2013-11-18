@@ -1,1 +1,1 @@
-alert(Math.min(2, 4) + 100);
+confirm("Shall we, then?");
