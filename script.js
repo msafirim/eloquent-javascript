@@ -1,5 +1,8 @@
-function add(a, b) {
-  return a + b;
+function power(base, exponent) {
+  var result = 1;
+  for (var count = 0; count < exponent; count++)
+    result *= base;
+  return result;
 }
 
-alert(add(2,2));
+alert(power(2, 10));
