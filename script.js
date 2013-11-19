@@ -1,5 +1,14 @@
-function yell(message) {
-  alert(message + "!!");
+var variable = "top-level";
+
+function printVariable() {
+  alert("inside printVariable, the variable holds '" +
+        variable + "'.");
 }
 
-yell("Yow");
+function test() {
+  var variable = "local";
+  alert("inside test, the variable holds '" + variable + "'.");
+  printVariable();
+}
+
+test();
