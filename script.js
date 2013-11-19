@@ -7,4 +7,12 @@ function makeAddFunction(amount) {
 
 var addTwo = makeAddFunction(2);
 var addFive = makeAddFunction(5);
-alert(addTwo(1) + addFive(1));
+console.log(addTwo(1) + addFive(1));
+
+function chicken() {
+  return egg();
+}
+function egg() {
+  return chicken();
+}
+console.log(chicken() + " came first.");
