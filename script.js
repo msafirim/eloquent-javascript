@@ -1,2 +1,5 @@
-var input = prompt("What is your name?", "Kilgore Trout");
-alert("Well hello " + (input || "dear"));
+function add(a, b) {
+  return a + b;
+}
+
+alert(add(2,2));
