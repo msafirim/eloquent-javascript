@@ -15,9 +15,15 @@ function findSequence(goal) {
       return history;
     else if (start > goal)
       return null;
-    else
-      return find(start + 5, "(" + history + " + 5)") ||
-             find(start * 3, "(" + history + " * 3)");
+    else 
+     /* return find(start + 5, "(" + history + " + 5)") ||
+             find(start * 3, "(" + history + " * 3)"); */
+
+   var found = find(start + 5, "(" + history + " + 5)");
+  if (found == null)
+    found = find(start * 3, "(" + history + " * 3)");
+  return found;
+
   }
   return find(1, "1");
 }
