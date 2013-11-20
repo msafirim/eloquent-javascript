@@ -157,3 +157,11 @@ console.log("Day of week: ", today.getDay());
 
 var today = new Date();
 console.log(today.getTime());
+
+
+var wallFall = new Date(1989, 10, 9);
+var gulfWarOne = new Date(1990, 6, 2);
+console.log(wallFall < gulfWarOne);
+console.log(wallFall == wallFall);
+// but
+console.log(wallFall == new Date(1989, 10, 9));
