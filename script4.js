@@ -104,7 +104,7 @@ console.log(catNames("born 20/09/2004 (mother Yellow Bess): " +
 
 
 function findLivingCats() {
-  var mailArchive = retrieveMails();
+ // var mailArchive = retrieveMails();
   var livingCats = {"Spot": true};
 
   function handleParagraph(paragraph) {
@@ -125,7 +125,7 @@ function findLivingCats() {
 var howMany = 0;
 for (var cat in findLivingCats())
   howMany++;
-print("There are ", howMany, " cats.");
+console.log("There are ", howMany, " cats.");
 
 function addToSet(set, values) {
   for (var i = 0; i < values.length; i++)
@@ -140,3 +140,8 @@ function removeFromSet(set, values) {
 
 var when = new Date(1980, 1, 1);
 console.log(when);
+
+
+console.log(new Date());
+console.log(new Date(1980, 1, 1));
+console.log(new Date(2007, 2, 30, 8, 20, 30));
