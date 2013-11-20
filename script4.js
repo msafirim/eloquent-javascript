@@ -90,5 +90,7 @@ console.log(paragraph.slice(0, 4) == "born");
 function startsWith(string, pattern) {
   return string.slice(0, pattern.length) == pattern;
 }
-
 console.log(startsWith("rotation", "rot"));
+
+console.log("Pip".charAt(250));
+console.log("Nop".slice(1, 10));
