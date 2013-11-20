@@ -165,3 +165,8 @@ console.log(wallFall < gulfWarOne);
 console.log(wallFall == wallFall);
 // but
 console.log(wallFall == new Date(1989, 10, 9));
+
+
+var wallFall1 = new Date(1989, 10, 9),
+    wallFall2 = new Date(1989, 10, 9);
+show(wallFall1.getTime() == wallFall2.getTime());
