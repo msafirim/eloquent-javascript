@@ -34,3 +34,12 @@ var add = function(a, b) {
   return a + b;
 };
 console.log(add(5, 5));
+
+function greaterThan(x) {
+  return function(y) {
+    return y > x;
+  };
+}
+
+var greaterThanTen = greaterThan(10);
+console.log(greaterThanTen(9));
