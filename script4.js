@@ -18,3 +18,7 @@ console.log(thing["5"]);
 thing["5"] = 20;
 console.log(thing[2 + 3]);
 delete thing["gabba gabba"];
+
+var propertyName = "length";
+var text = "mainline";
+console.log(text[propertyName]);
