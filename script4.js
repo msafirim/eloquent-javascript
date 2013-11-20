@@ -153,3 +153,7 @@ console.log("Year: ", today.getFullYear(), ", month: ",
 console.log("Hour: ", today.getHours(), ", minutes: ",
       today.getMinutes(), ", seconds: ", today.getSeconds());
 console.log("Day of week: ", today.getDay());
+
+
+var today = new Date();
+console.log(today.getTime());
