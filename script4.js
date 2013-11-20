@@ -101,3 +101,38 @@ function catNames(paragraph) {
 }
 console.log(catNames("born 20/09/2004 (mother Yellow Bess): " +
               "Doctor Hobbles the 2nd, Noog"));
+
+
+function findLivingCats() {
+  var mailArchive = retrieveMails();
+  var livingCats = {"Spot": true};
+
+  function handleParagraph(paragraph) {
+    if (startsWith(paragraph, "born"))
+      addToSet(livingCats, catNames(paragraph));
+    else if (startsWith(paragraph, "died"))
+      removeFromSet(livingCats, catNames(paragraph));
+  }
+
+  for (var mail = 0; mail < mailArchive.length; mail++) {
+    var paragraphs = mailArchive[mail].split("\n");
+    for (var i = 0; i < paragraphs.length; i++)
+      handleParagraph(paragraphs[i]);
+  }
+  return livingCats;
+}
+
+var howMany = 0;
+for (var cat in findLivingCats())
+  howMany++;
+print("There are ", howMany, " cats.");
+
+function addToSet(set, values) {
+  for (var i = 0; i < values.length; i++)
+    set[values[i]] = true;
+}
+
+function removeFromSet(set, values) {
+  for (var i = 0; i < values.length; i++)
+    delete set[values[i]];
+}
