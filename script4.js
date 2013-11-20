@@ -77,3 +77,6 @@ console.log(mack);
 
 var words = "Cities of the Interior";
 console.log(words.split(" "));
+
+var array = ["a", "b", "c d"];
+console.log(array.join(" ").split(" "));
