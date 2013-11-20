@@ -74,3 +74,6 @@ mack.push("Knife");
 console.log(mack.join(" "));
 console.log(mack.pop());
 console.log(mack);
+
+var words = "Cities of the Interior";
+console.log(words.split(" "));
