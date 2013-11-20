@@ -145,3 +145,11 @@ console.log(when);
 console.log(new Date());
 console.log(new Date(1980, 1, 1));
 console.log(new Date(2007, 2, 30, 8, 20, 30));
+
+
+var today = new Date();
+console.log("Year: ", today.getFullYear(), ", month: ",
+      today.getMonth(), ", day: ", today.getDate());
+console.log("Hour: ", today.getHours(), ", minutes: ",
+      today.getMinutes(), ", seconds: ", today.getSeconds());
+console.log("Day of week: ", today.getDay());
