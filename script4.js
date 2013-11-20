@@ -53,3 +53,12 @@ var mailArchive = ["mail one", "mail two", "mail three"];
 
 for (var current = 0; current < mailArchive.length; current++)
   console.log("Processing e-mail #", current, ": ", mailArchive[current]);
+
+function range(upto) {
+  var result = [];
+  for (var i = 0; i <= upto; i++)
+    result[i] = i;
+  return result;
+}
+console.log(range(4));
+
