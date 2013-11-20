@@ -86,3 +86,9 @@ console.log(paragraph.charAt(0) == "b" && paragraph.charAt(1) == "o" &&
      paragraph.charAt(2) == "r" && paragraph.charAt(3) == "n");
 
 console.log(paragraph.slice(0, 4) == "born");
+
+function startsWith(string, pattern) {
+  return string.slice(0, pattern.length) == pattern;
+}
+
+console.log(startsWith("rotation", "rot"));
