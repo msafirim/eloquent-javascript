@@ -84,3 +84,5 @@ console.log(array.join(" ").split(" "));
 var paragraph = "born 15-11-2003 (mother Spot): White Fang";
 console.log(paragraph.charAt(0) == "b" && paragraph.charAt(1) == "o" &&
      paragraph.charAt(2) == "r" && paragraph.charAt(3) == "n");
+
+console.log(paragraph.slice(0, 4) == "born");
