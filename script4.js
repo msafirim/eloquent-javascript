@@ -62,3 +62,7 @@ function range(upto) {
 }
 console.log(range(4));
 
+var doh = "Doh";
+console.log(typeof doh.toUpperCase);
+console.log(doh.toUpperCase());
+console.log(doh.toLowerCase());
