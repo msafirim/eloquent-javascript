@@ -22,3 +22,8 @@ delete thing["gabba gabba"];
 var propertyName = "length";
 var text = "mainline";
 console.log(text[propertyName]);
+
+var chineseBox = {};
+chineseBox.content = chineseBox;
+console.log("content" in chineseBox);
+console.log("content" in chineseBox.content);
