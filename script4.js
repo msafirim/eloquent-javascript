@@ -12,3 +12,9 @@ console.log(cat);
 var empty = {};
 empty.notReally = 1000;
 console.log(empty.notReally);
+
+var thing = {"gabba gabba": "hey", "5": 10};
+console.log(thing["5"]);
+thing["5"] = 20;
+console.log(thing[2 + 3]);
+delete thing["gabba gabba"];
