@@ -66,3 +66,11 @@ var doh = "Doh";
 console.log(typeof doh.toUpperCase);
 console.log(doh.toUpperCase());
 console.log(doh.toLowerCase());
+
+var mack = [];
+mack.push("Mack");
+mack.push("the");
+mack.push("Knife");
+console.log(mack.join(" "));
+console.log(mack.pop());
+console.log(mack);
