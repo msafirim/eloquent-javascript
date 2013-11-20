@@ -8,3 +8,7 @@ console.log(cat.size);
 delete cat.size;
 console.log(cat.size);
 console.log(cat);
+
+var empty = {};
+empty.notReally = 1000;
+console.log(empty.notReally);
