@@ -48,3 +48,8 @@ console.log(object1 == object3);
 object1.value = 15;
 console.log(object2.value);
 console.log(object3.value);
+
+var mailArchive = ["mail one", "mail two", "mail three"];
+
+for (var current = 0; current < mailArchive.length; current++)
+  console.log("Processing e-mail #", current, ": ", mailArchive[current]);
