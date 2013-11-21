@@ -185,3 +185,17 @@ function extractDate(paragraph) {
 }
 
 console.log(extractDate("died 27-04-2006: Black Leclère"));
+
+
+function catRecord(name, birthdate, mother) {
+  return {name: name, birth: birthdate, mother: mother};
+}
+
+function addCats(set, names, birthdate, mother) {
+  for (var i = 0; i < names.length; i++)
+    set[names[i]] = catRecord(names[i], birthdate, mother);
+}
+function deadCats(set, names, deathdate) {
+  for (var i = 0; i < names.length; i++)
+    set[names[i]].death = deathdate;
+}
