@@ -25,3 +25,11 @@ if (parenthesized != undefined)
   console.log("You parenthesized '", parenthesized, "'.");
 
 
+function lastElement(array) {
+  if (array.length > 0)
+    return array[array.length - 1];
+  else
+    return undefined;
+}
+
+console.log(lastElement([1, 2, undefined]));
