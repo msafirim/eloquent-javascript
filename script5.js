@@ -7,7 +7,14 @@ function power(base, exponent) {
 
 
 function between(string, start, end) {
-  var startAt = string.indexOf(start) + start.length;
+    var startAt = string.indexOf(start);
+  if (startAt == -1)
+    return undefined;
+  startAt += start.length;
   var endAt = string.indexOf(end, startAt);
+  if (endAt == -1)
+    return undefined;
+
   return string.slice(startAt, endAt);
 }
+
