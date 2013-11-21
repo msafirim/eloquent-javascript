@@ -69,3 +69,10 @@ function processThing(thing) {
   }
 }
 
+
+try {
+  console.log(Sasquatch);
+}
+catch (error) {
+  console.log("Caught: " + error.message);
+}
