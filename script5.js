@@ -76,3 +76,6 @@ try {
 catch (error) {
   console.log("Caught: " + error.message);
 }
+
+
+throw new Error("Fire!");
