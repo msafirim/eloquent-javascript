@@ -239,3 +239,23 @@ function findCats() {
 }
 
 var catData = findCats();
+
+
+function formatDate(date) {
+  return date.getDate() + "/" + (date.getMonth() + 1) +
+         "/" + date.getFullYear();
+}
+
+function catInfo(data, name) {
+  if (!(name in data))
+    return "No cat by the name of " + name + " is known.";
+
+  var cat = data[name];
+  var message = name + ", born " + formatDate(cat.birth) +
+                " from mother " + cat.mother;
+  if ("death" in cat)
+    message += ", died " + formatDate(cat.death);
+  return message + ".";
+}
+
+console.log(catInfo(catData, "Fat Igor"));
