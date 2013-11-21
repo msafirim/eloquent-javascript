@@ -320,8 +320,8 @@ function range(start, end) {
   return result;
 }
 
-console.log(range(4));
-console.log(range(2, 4));
+ console.log(range(4));
+ console.log(range(2, 4));
 
 
 function sum(numbers) {
@@ -331,7 +331,7 @@ function sum(numbers) {
   return total;
 }
 
-console.log(sum(range(1, 10)));
+ console.log(sum(range(1, 10)));
 
 
 for (var name in Math)
@@ -340,3 +340,8 @@ for (var name in Math)
 
 for (var name in ["Huey", "Dewey", "Loui"])
   console.log(name);
+
+
+var array = ["Heaven", "Earth", "Man"];
+array.length = 2;
+console.log(array);
