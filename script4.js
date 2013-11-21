@@ -332,3 +332,7 @@ function sum(numbers) {
 }
 
 console.log(sum(range(1, 10)));
+
+
+for (var name in Math)
+  console.log(name);
