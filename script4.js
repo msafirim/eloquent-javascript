@@ -199,3 +199,11 @@ function deadCats(set, names, deathdate) {
   for (var i = 0; i < names.length; i++)
     set[names[i]].death = deathdate;
 }
+
+
+function extractMother(paragraph) {
+  var start = paragraph.indexOf("(mother ") + "(mother ".length;
+  var end = paragraph.indexOf(")");
+  return paragraph.slice(start, end);
+}
+console.log(extractMother("born 15/11/2003 (mother Spot): White Fang"));
