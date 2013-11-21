@@ -295,5 +295,15 @@ console.log(oldestCat(catData));
 
 function argumentCounter() {
   console.log("You gave me ", arguments.length, " arguments.");
-}
+} 
 argumentCounter("Death", "Famine", "Pestilence");
+
+
+function add(number, howmuch) {
+  if (arguments.length < 2)
+    howmuch = 1;
+  return number + howmuch;
+}
+
+console.log(add(6));
+console.log(add(6, 4));
