@@ -169,4 +169,8 @@ console.log(wallFall == new Date(1989, 10, 9));
 
 var wallFall1 = new Date(1989, 10, 9),
     wallFall2 = new Date(1989, 10, 9);
-show(wallFall1.getTime() == wallFall2.getTime());
+console.log(wallFall1.getTime() == wallFall2.getTime());
+
+
+var now = new Date();
+console.log(now.getTimezoneOffset());
