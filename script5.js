@@ -52,3 +52,15 @@ try {
 catch (error) {
   console.log("Something went wrong: ", error);
 }
+
+
+var currentThing = null;
+
+function processThing(thing) {
+  if (currentThing != null)
+    throw "Oh no! We are already processing a thing!";
+
+  currentThing = thing;
+  /* do complicated processing... */
+  currentThing = null;
+}
