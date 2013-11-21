@@ -322,3 +322,13 @@ function range(start, end) {
 
 console.log(range(4));
 console.log(range(2, 4));
+
+
+function sum(numbers) {
+  var total = 0;
+  for (var i = 0; i < numbers.length; i++)
+    total += numbers[i];
+  return total;
+}
+
+console.log(sum(range(1, 10)));
