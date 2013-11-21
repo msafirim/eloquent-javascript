@@ -61,6 +61,11 @@ function processThing(thing) {
     throw "Oh no! We are already processing a thing!";
 
   currentThing = thing;
+ try { 
   /* do complicated processing... */
-  currentThing = null;
 }
+  finally {
+    currentThing = null;
+  }
+}
+
