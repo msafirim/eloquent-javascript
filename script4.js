@@ -291,3 +291,9 @@ function oldestCat(data) {
 }
 
 console.log(oldestCat(catData));
+
+
+function argumentCounter() {
+  console.log("You gave me ", arguments.length, " arguments.");
+}
+argumentCounter("Death", "Famine", "Pestilence");
