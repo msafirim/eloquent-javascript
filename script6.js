@@ -12,3 +12,12 @@ function sum(numbers) {
   return total;
 }
 console.log(sum([1, 10, 100]));
+
+
+function negate(func) {
+  return function(x) {
+    return !func(x);
+  };
+}
+var isNotNaN = negate(isNaN);
+console.log(isNotNaN(NaN));
