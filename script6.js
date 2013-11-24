@@ -259,3 +259,6 @@ function renderHTML(element) {
   render(element);
   return pieces.join("");
 }
+
+
+console.log(renderHTML(link("http://www.nedroid.com", "Drawings!")));
