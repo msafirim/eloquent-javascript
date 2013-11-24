@@ -342,3 +342,15 @@ function negate(func) {
     return !func.apply(null, arguments);
   };
 }
+
+
+function compose(func1, func2) {
+  return function() {
+    return func1(func2.apply(null, arguments));
+  };
+}
+
+var isUndefined = partial(op["==="], undefined);
+var isDefined = compose(op["!"], isUndefined);
+console.log(isDefined(Math.PI));
+console.log(isDefined(Math.PIE));
