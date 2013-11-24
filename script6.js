@@ -284,3 +284,10 @@ function renderFragment(fragment) {
   else if (fragment.type == "normal")
     return fragment.content;
 }
+
+
+function renderFootnote(footnote) {
+  var number = "[" + footnote.number + "] ";
+  var anchor = tag("a", [number], {name: "footnote" + footnote.number});
+  return tag("p", [tag("small", [anchor, footnote.content])]);
+}
