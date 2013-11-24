@@ -330,3 +330,8 @@ function partial(func) {
 
 
 console.log(map(partial(op["+"], 1), [0, 2, 4, 6, 8, 10]));
+
+
+function square(x) {return x * x;}
+
+console.log(map(partial(map, square), [[10, 100], [12, 16], [0, 1]]));
