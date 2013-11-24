@@ -197,3 +197,13 @@ var linkObject = {name: "a", attributes:
 function tag(name, content, attributes) {
   return {name: name, attributes: attributes, content: content};
 }
+
+
+function link(target, text) {
+  return tag("a", [text], {href: target});
+}
+
+function htmlDoc(title, bodyContent) {
+  return tag("html", [tag("head", [tag("title", [title])]),
+                      tag("body", bodyContent)]);
+}
