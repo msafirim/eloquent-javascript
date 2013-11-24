@@ -187,3 +187,8 @@ var url = "http://www.gokgs.com/";
 var text = "Play Go!";
 var linkText = "<a href=\"" + url + "\">" + text + "</a>";
 console.log(linkText);
+
+
+var linkObject = {name: "a", attributes:
+                 {href: "http://www.gokgs.com/"}, 
+                  content: ["Play Go!"]};
