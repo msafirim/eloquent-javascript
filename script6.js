@@ -291,3 +291,15 @@ function renderFootnote(footnote) {
   var anchor = tag("a", [number], {name: "footnote" + footnote.number});
   return tag("p", [tag("small", [anchor, footnote.content])]);
 }
+
+
+function renderFile(file, title) {
+  var paragraphs = map(processParagraph, file.split("\n\n"));
+  var footnotes = map(renderFootnote,
+                      extractFootnotes(paragraphs));
+  var body = map(renderParagraph, paragraphs).concat(footnotes);
+  return renderHTML(htmlDoc(title, body));
+}
+
+//viewHTML(renderFile(recluseFile(), "The Book of Programming"));
+console.log(renderFile(recluseFile(), "The Book of Programming"));
