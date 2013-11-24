@@ -21,3 +21,11 @@ function negate(func) {
 }
 var isNotNaN = negate(isNaN);
 console.log(isNotNaN(NaN));
+
+
+function forEach(array, action) {
+  for (var i = 0; i < array.length; i++)
+    action(array[i]);
+}
+
+forEach(["Wampeter", "Foma", "Granfalloon"], console.log);
