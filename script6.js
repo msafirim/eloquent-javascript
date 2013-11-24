@@ -29,3 +29,12 @@ function forEach(array, action) {
 }
 
 forEach(["Wampeter", "Foma", "Granfalloon"], console.log);
+
+
+console.log(Math.min.apply(null, [5, 6]));
+
+function negate(func) {
+  return function() {
+    return !func.apply(null, arguments);
+  };
+}
