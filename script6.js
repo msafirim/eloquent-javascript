@@ -101,10 +101,9 @@ function processParagraph(paragraph) {
           content: paragraph};
 }
 
-console.log(processParagraph(paragraphs[0]));
+// console.log(processParagraph(paragraphs[0]));
 
-var paragraphs = map(processParagraph,
-                     recluseFile().split("\n\n"));
+//var paragraphs = map(processParagraph, recluseFile().split("\n\n"));
 
 
 function splitParagraph(text) {
@@ -182,3 +181,9 @@ function extractFootnotes(paragraphs) {
 
   return footnotes;
 }   
+
+
+var url = "http://www.gokgs.com/";
+var text = "Play Go!";
+var linkText = "<a href=\"" + url + "\">" + text + "</a>";
+console.log(linkText);
