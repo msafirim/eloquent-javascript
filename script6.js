@@ -269,3 +269,18 @@ var body = [tag("h1", ["The Test"]),
             image("img/sheep.png")];
 var doc = htmlDoc("The Test", body);
 console.log(renderHTML(doc));
+
+
+function renderParagraph(paragraph) {
+  return tag(paragraph.type, map(renderFragment,
+                                 paragraph.content));
+}
+
+function renderFragment(fragment) {
+  if (fragment.type == "reference")
+    return footnote(fragment.number);
+  else if (fragment.type == "emphasised")
+    return tag("em", [fragment.content]);
+  else if (fragment.type == "normal")
+    return fragment.content;
+}
