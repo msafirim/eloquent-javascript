@@ -207,3 +207,18 @@ function htmlDoc(title, bodyContent) {
   return tag("html", [tag("head", [tag("title", [title])]),
                       tag("body", bodyContent)]);
 }
+
+
+function image(src) {
+  return tag("img", [], {src: src});
+}
+
+
+function escapeHTML(text) {
+  var replacements = [[/&/g, "&amp;"], [/"/g, "&quot;"],
+                      [/</g, "&lt;"], [/>/g, "&gt;"]];
+  forEach(replacements, function(replace) {
+    text = text.replace(replace[0], replace[1]);
+  });
+  return text;
+}
