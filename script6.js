@@ -303,3 +303,12 @@ function renderFile(file, title) {
 
 //viewHTML(renderFile(recluseFile(), "The Book of Programming"));
 console.log(renderFile(recluseFile(), "The Book of Programming"));
+
+
+var op = {
+  "+": function(a, b){return a + b;},
+  "==": function(a, b){return a == b;},
+  "===": function(a, b){return a === b;},
+  "!": function(a){return !a;}
+  /* and so on */
+};
