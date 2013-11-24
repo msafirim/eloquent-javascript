@@ -302,7 +302,7 @@ function renderFile(file, title) {
 }
 
 //viewHTML(renderFile(recluseFile(), "The Book of Programming"));
-console.log(renderFile(recluseFile(), "The Book of Programming"));
+//console.log(renderFile(recluseFile(), "The Book of Programming"));
 
 
 var op = {
@@ -327,3 +327,6 @@ function partial(func) {
     return func.apply(null, fixedArgs.concat(asArray(arguments)));
   };
 }
+
+
+console.log(map(partial(op["+"], 1), [0, 2, 4, 6, 8, 10]));
