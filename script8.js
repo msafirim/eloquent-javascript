@@ -54,3 +54,6 @@ console.log(simpleObject.toString);
 
 console.log(Rabbit.prototype);
 console.log(Rabbit.prototype.constructor);
+
+
+console.log(killerRabbit.toString == simpleObject.toString);
