@@ -317,3 +317,9 @@ function findRoute(from, to) {
   }
   return null;
 }
+
+
+var route = findRoute(point(0, 0), point(19, 19));
+
+
+showRoute(route);
