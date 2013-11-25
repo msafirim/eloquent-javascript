@@ -110,3 +110,15 @@ function member(array, value) {
 }
 
 console.log(member(["Fear", "Loathing"], "Denial"));
+
+
+function every(test, array) {
+  for (var i = 0; i < array.length; i++) {
+    var found = test(array[i]);
+    if (!found)
+      return found;
+  }
+  return true;
+}
+
+console.log(every(partial(op["!="], 0), [1, 2, -1]));
