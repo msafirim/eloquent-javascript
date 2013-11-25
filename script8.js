@@ -17,3 +17,6 @@ fatRabbit.speak("I could sure use a carrot right now.");
 
 
 speak.apply(fatRabbit, ["Yum."]);
+
+
+speak.call(fatRabbit, "Burp.");
