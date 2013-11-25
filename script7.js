@@ -202,3 +202,6 @@ function getProperty(propName) {
 function shortestRoute(from, to) {
   return minimise(getProperty("length"), possibleRoutes(from, to));
 }
+
+
+console.log(shortestRoute("Point Kiukiu", "Point Teohotepapapa").places);
