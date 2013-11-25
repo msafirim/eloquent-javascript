@@ -45,3 +45,8 @@ var blackRabbit = makeRabbit("black");
 
 console.log(killerRabbit.constructor);
 console.log(blackRabbit.constructor);
+
+
+var simpleObject = {};
+console.log(simpleObject.constructor);
+console.log(simpleObject.toString);
