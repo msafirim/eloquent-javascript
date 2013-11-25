@@ -30,7 +30,7 @@ function Rabbit(adjective) {
 }
 
 var killerRabbit = new Rabbit("killer");
-killerRabbit.speak("GRAAAAAAAAAH!");
+//killerRabbit.speak("GRAAAAAAAAAH!");
 
 
 function makeRabbit(adjective) {
@@ -71,3 +71,14 @@ Rabbit.prototype.dance = function() {
 };
 
 killerRabbit.dance();
+
+
+function Rabbit(adjective) {
+  this.adjective = adjective;
+}
+Rabbit.prototype.speak = function(line) {
+  console.log("The ", this.adjective, " rabbit says '", line, "'");
+};
+
+var hazelRabbit = new Rabbit("hazel");
+hazelRabbit.speak("Good Frith!");
