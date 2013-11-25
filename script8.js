@@ -41,3 +41,7 @@ function makeRabbit(adjective) {
 }
 
 var blackRabbit = makeRabbit("black");
+
+
+console.log(killerRabbit.constructor);
+console.log(blackRabbit.constructor);
