@@ -50,3 +50,7 @@ console.log(blackRabbit.constructor);
 var simpleObject = {};
 console.log(simpleObject.constructor);
 console.log(simpleObject.toString);
+
+
+console.log(Rabbit.prototype);
+console.log(Rabbit.prototype.constructor);
