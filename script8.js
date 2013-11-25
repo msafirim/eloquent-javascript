@@ -57,3 +57,10 @@ console.log(Rabbit.prototype.constructor);
 
 
 console.log(killerRabbit.toString == simpleObject.toString);
+
+
+Rabbit.prototype.teeth = "small";
+console.log(killerRabbit.teeth);
+killerRabbit.teeth = "long, sharp, and bloody";
+console.log(killerRabbit.teeth);
+console.log(Rabbit.prototype.teeth);
