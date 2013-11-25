@@ -64,3 +64,10 @@ console.log(killerRabbit.teeth);
 killerRabbit.teeth = "long, sharp, and bloody";
 console.log(killerRabbit.teeth);
 console.log(Rabbit.prototype.teeth);
+
+
+Rabbit.prototype.dance = function() {
+  console.log("The ", this.adjective, " rabbit dances a jig.");
+};
+
+killerRabbit.dance();
