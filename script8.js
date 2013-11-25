@@ -82,3 +82,8 @@ Rabbit.prototype.speak = function(line) {
 
 var hazelRabbit = new Rabbit("hazel");
 hazelRabbit.speak("Good Frith!");
+
+
+var noCatsAtAll = {};
+if ("constructor" in noCatsAtAll)
+  console.log("Yes, there definitely is a cat called 'constructor'.");
