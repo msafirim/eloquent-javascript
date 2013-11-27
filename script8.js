@@ -698,3 +698,17 @@ var giantSloth = DetailedItem.create(
   "the giant sloth",
   "it is quietly hanging from a tree, munching leaves");
 giantSloth.inspect();
+
+
+var SmallItem = Item.extend({
+  kick: function() {
+    console.log(this.name, " flies across the room.");
+  },
+  take: function() {
+    // (imagine some code that moves the item to your pocket here)
+    console.log("you take ", this.name, ".");
+  }
+});
+
+var pencil = SmallItem.create("the red pencil");
+pencil.take();
