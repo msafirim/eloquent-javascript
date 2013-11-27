@@ -654,3 +654,12 @@ Object.prototype.create = function() {
     object.construct.apply(object, arguments);
   return object;
 };
+
+
+Object.prototype.extend = function(properties) {
+  var result = clone(this);
+  forEachIn(properties, function(name, value) {
+    result[name] = value;
+  });
+  return result;
+};
