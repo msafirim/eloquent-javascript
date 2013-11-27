@@ -305,3 +305,15 @@ Terrarium.prototype.toString = function() {
   return characters.join("");
 };
 
+
+function bind(func, object) {
+  return function(){
+    return func.apply(object, arguments);
+  };
+}
+
+var testArray = [];
+var pushTest = bind(testArray.push, testArray);
+pushTest("A");
+pushTest("B");
+console.log(testArray);
