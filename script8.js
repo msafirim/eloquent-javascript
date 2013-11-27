@@ -682,3 +682,19 @@ var Item = {
 
 var lantern = Item.create("the brass lantern");
 lantern.kick();
+
+
+var DetailedItem = Item.extend({
+  construct: function(name, details) {
+    Item.construct.call(this, name);
+    this.details = details;
+  },
+  inspect: function() {
+    console.log("you see ", this.name, ", ", this.details, ".");
+  }
+});
+
+var giantSloth = DetailedItem.create(
+  "the giant sloth",
+  "it is quietly hanging from a tree, munching leaves");
+giantSloth.inspect();
