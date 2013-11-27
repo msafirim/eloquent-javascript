@@ -326,3 +326,13 @@ function method(object, name) {
 }
 
 var pushTest = method(testArray, "push");
+
+
+Terrarium.prototype.listActingCreatures = function() {
+  var found = [];
+  this.grid.each(function(point, value) {
+    if (value != undefined && value.act)
+      found.push({object: value, point: point});
+  });
+  return found;
+};
