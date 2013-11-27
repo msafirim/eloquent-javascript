@@ -465,3 +465,10 @@ DrunkBug.prototype.act = function(surroundings) {
 DrunkBug.prototype.character = "~";
 
 creatureTypes.register(DrunkBug);
+
+
+function clone(object) {
+  function OneShotConstructor(){}
+  OneShotConstructor.prototype = object;
+  return new OneShotConstructor();
+}
