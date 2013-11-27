@@ -169,3 +169,17 @@ console.log(colours.contains("constructor"));
 colours.each(function(name, colour) {
   console.log(name, " is ", colour);
 });
+
+
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+Point.prototype.add = function(other) {
+  return new Point(this.x + other.x, this.y + other.y);
+};
+Point.prototype.isEqualTo = function(other) {
+  return this.x == other.x && this.y == other.y;
+};
+
+console.log((new Point(3, 1)).add(new Point(2, 4)));
