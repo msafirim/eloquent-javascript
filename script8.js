@@ -364,3 +364,9 @@ Terrarium.prototype.processCreature = function(creature) {
     throw new Error("Unsupported action: " + action.type);
   }
 };
+
+
+Terrarium.prototype.step = function() {
+  forEach(this.listActingCreatures(),
+          bind(this.processCreature, this));
+};
