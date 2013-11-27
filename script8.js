@@ -397,3 +397,13 @@ Terrarium.prototype.step = function() {
   if (this.onStep)
     this.onStep();
 };
+
+
+function elementFromCharacter(character) {
+  if (character == " ")
+    return undefined;
+  else if (character == "#")
+    return wall;
+  else if (character == "o")
+    return new StupidBug();
+}
