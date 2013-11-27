@@ -712,3 +712,13 @@ var SmallItem = Item.extend({
 
 var pencil = SmallItem.create("the red pencil");
 pencil.take();
+
+
+Object.prototype.hasPrototype = function(prototype) {
+  function DummyConstructor() {}
+  DummyConstructor.prototype = prototype;
+  return this instanceof DummyConstructor;
+};
+
+console.log(pencil.hasPrototype(Item));
+console.log(pencil.hasPrototype(DetailedItem));
