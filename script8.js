@@ -370,3 +370,9 @@ Terrarium.prototype.step = function() {
   forEach(this.listActingCreatures(),
           bind(this.processCreature, this));
 };
+
+
+Point.prototype.toString = function() {
+  return "(" + this.x + "," + this.y + ")";
+};
+console.log(new Point(5, 5));
