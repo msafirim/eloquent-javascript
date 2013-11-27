@@ -424,3 +424,16 @@ function elementFromCharacter(character) {
   else
     throw new Error("Unknown character: " + character);
 }
+
+
+function BouncingBug() {
+  this.direction = "ne";
+}
+BouncingBug.prototype.act = function(surroundings) {
+  if (surroundings[this.direction] != " ")
+    this.direction = (this.direction == "ne" ? "sw" : "ne");
+  return {type: "move", direction: this.direction};
+};
+BouncingBug.prototype.character = "%";
+
+creatureTypes.register(BouncingBug);
