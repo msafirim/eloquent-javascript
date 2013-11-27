@@ -663,3 +663,22 @@ Object.prototype.extend = function(properties) {
   });
   return result;
 };
+
+
+var Item = {
+  construct: function(name) {
+    this.name = name;
+  },
+  inspect: function() {
+    console.log("it is ", this.name, ".");
+  },
+  kick: function() {
+    console.log("klunk!");
+  },
+  take: function() {
+    console.log("you can not lift ", this.name, ".");
+  }
+};
+
+var lantern = Item.create("the brass lantern");
+lantern.kick();
