@@ -279,3 +279,16 @@ function elementFromCharacter(character) {
   else if (character == "o")
     return new StupidBug();
 }
+
+
+wall.character = "#";
+StupidBug.prototype.character = "o";
+
+function characterFromElement(element) {
+  if (element == undefined)
+    return " ";
+  else
+    return element.character;
+}
+
+console.log(characterFromElement(wall));
