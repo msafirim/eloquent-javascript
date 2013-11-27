@@ -389,3 +389,11 @@ Terrarium.prototype.stop = function() {
     this.running = null;
   }
 };
+
+
+Terrarium.prototype.step = function() {
+  forEach(this.listActingCreatures(),
+          bind(this.processCreature, this));
+  if (this.onStep)
+    this.onStep();
+};
