@@ -722,3 +722,19 @@ Object.prototype.hasPrototype = function(prototype) {
 
 console.log(pencil.hasPrototype(Item));
 console.log(pencil.hasPrototype(DetailedItem));
+
+
+function mixInto(object, mixIn) {
+  forEachIn(mixIn, function(name, value) {
+    object[name] = value;
+  });
+};
+
+var SmallDetailedItem = clone(DetailedItem);
+mixInto(SmallDetailedItem, SmallItem);
+
+var deadMouse = SmallDetailedItem.create(
+  "Fred the mouse",
+  "he is dead");
+deadMouse.inspect();
+deadMouse.kick();
