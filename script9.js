@@ -17,3 +17,8 @@ function require(file) {
     load(file);
   }
 }
+
+
+console.log(window);
+console.log(window.print == print);
+console.log(window.window.window.window.window);
