@@ -30,3 +30,7 @@ console.log(/\bcat\b/.test("concatenate"));
 
 var parenthesizedText = /\(.*\)/;
 console.log("Its (the sloth's) claws were gigantic!".search(parenthesizedText));
+
+
+var datePattern = /\d{1,2}\/\d\d?\/\d{4}/;
+console.log("born 15/11/2003 (mother Spot): White Fang".search(datePattern));
