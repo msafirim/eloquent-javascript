@@ -47,6 +47,20 @@ console.log(getMonthName(11));
 
 
 
+function forEachIn(object, action) {
+  try {
+    for (var property in object) {
+      if (Object.prototype.hasOwnProperty.call(object, property))
+        action(property, object[property]);
+    }
+  }
+  catch(e) {
+    if (e != Break)
+      throw e;
+  }
+}
+
+
 function provide(values) {
   forEachIn(values, function(name, value) {
     window[name] = value;
