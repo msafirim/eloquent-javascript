@@ -18,3 +18,7 @@ console.log("ABCBACCBBADABC".search(notABC));
 
 var datePattern = /\d\d\/\d\d\/\d\d\d\d/;
 console.log("born 15/11/2003 (mother Spot): White Fang".search(datePattern));
+
+
+console.log(/a+/.test("blah"));
+console.log(/^a+$/.test("blah"));
