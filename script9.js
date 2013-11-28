@@ -101,3 +101,18 @@ var HTML = {
 provide(HTML);
 console.log(link("http://download.oracle.com/docs/cd/E19957-01/816-6408-10/object.htm",
           "This is how objects work."));
+
+
+function range(start, end, stepSize, length) {
+  if (stepSize == undefined)
+    stepSize = 1;
+  if (end == undefined)
+    end = start + stepSize * (length - 1);
+
+  var result = [];
+  for (; start <= end; start += stepSize)
+    result.push(start);
+  return result;
+}
+
+console.log(range(0, undefined, 4, 5));
