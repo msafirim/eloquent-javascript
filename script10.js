@@ -54,3 +54,8 @@ console.log(holyCow.test("Sacred bovine!"));
 console.log("No".match(/Yes/));
 console.log("... yes".match(/yes/));
 console.log("Giant Ape".match(/giant (\w+)/i));
+
+
+var parenthesized = prompt("Tell me something", "").match(/\((.*)\)/);
+if (parenthesized != null)
+  console.log("You parenthesized '", parenthesized[1], "'");
