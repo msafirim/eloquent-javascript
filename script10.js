@@ -74,3 +74,6 @@ console.log(extractDate("born 5/2/2007 (mother Noog): Long-ear Johnson"));
 
 console.log("Borobudur".replace(/[ou]/g, "a"));
 
+
+var names = "Picasso, Pablo\nGauguin, Paul\nVan Gogh, Vincent";
+console.log(names.replace(/([\w ]+), ([\w ]+)/g, "$2 $1"));
