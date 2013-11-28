@@ -14,3 +14,7 @@ console.log("1a 2 3d".search(digitSurroundedBySpace));
 
 var notABC = /[^ABC]/;
 console.log("ABCBACCBBADABC".search(notABC));
+
+
+var datePattern = /\d\d\/\d\d\/\d\d\d\d/;
+console.log("born 15/11/2003 (mother Spot): White Fang".search(datePattern));
