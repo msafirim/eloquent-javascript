@@ -45,3 +45,7 @@ console.log(mailAddress.test("the_giant_sloth@gmail.com"));
 
 var cartoonCrying = /boo(hoo+)+/i;
 console.log("Then, he exclaimed 'Boohoooohoohooo'".search(cartoonCrying));
+
+
+var holyCow = /(sacred|holy) (cow|bovine|bull|taurus)/i;
+console.log(holyCow.test("Sacred bovine!"));
