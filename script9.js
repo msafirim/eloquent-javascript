@@ -96,3 +96,8 @@ var HTML = {
   }
   /* ... many more HTML-producing functions ... */
 };
+
+
+provide(HTML);
+console.log(link("http://download.oracle.com/docs/cd/E19957-01/816-6408-10/object.htm",
+          "This is how objects work."));
