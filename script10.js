@@ -26,3 +26,7 @@ console.log(/^a+$/.test("blah"));
 
 console.log(/cat/.test("concatenate"));
 console.log(/\bcat\b/.test("concatenate"));
+
+
+var parenthesizedText = /\(.*\)/;
+console.log("Its (the sloth's) claws were gigantic!".search(parenthesizedText));
