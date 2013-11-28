@@ -44,3 +44,10 @@ function buildMonthNameModule() {
 buildMonthNameModule();
 
 console.log(getMonthName(11));
+
+
+function provide(values) {
+  forEachIn(values, function(name, value) {
+    window[name] = value;
+  });
+}
