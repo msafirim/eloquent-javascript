@@ -22,3 +22,7 @@ console.log("born 15/11/2003 (mother Spot): White Fang".search(datePattern));
 
 console.log(/a+/.test("blah"));
 console.log(/^a+$/.test("blah"));
+
+
+console.log(/cat/.test("concatenate"));
+console.log(/\bcat\b/.test("concatenate"));
