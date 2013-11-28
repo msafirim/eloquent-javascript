@@ -70,3 +70,7 @@ function extractDate(string) {
 }
 
 console.log(extractDate("born 5/2/2007 (mother Noog): Long-ear Johnson"));
+
+
+console.log("Borobudur".replace(/[ou]/g, "a"));
+
