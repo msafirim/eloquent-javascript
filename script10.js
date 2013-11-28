@@ -95,3 +95,14 @@ var stock = "1 lemon, 2 cabbages, and 101 eggs";
 stock = stock.replace(/(\d+) (\w+)/g, eatOne);
 
 console.log(stock);
+
+
+function escapeHTML(text) {
+  var replacements = {"<": "&lt;", ">": "&gt;",
+                      "&": "&amp;", "\"": "&quot;"};
+  return text.replace(/[<>&"]/g, function(character) {
+    return replacements[character];
+  });
+}
+
+console.log(escapeHTML("The 'pre-formatted' tag is written \"<pre>\"."));
