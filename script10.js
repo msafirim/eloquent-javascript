@@ -10,3 +10,7 @@ console.log(story.search(asteriskOrBrace));
 
 var digitSurroundedBySpace = /\s\d\s/;
 console.log("1a 2 3d".search(digitSurroundedBySpace));
+
+
+var notABC = /[^ABC]/;
+console.log("ABCBACCBBADABC".search(notABC));
