@@ -12,3 +12,6 @@ console.log(decodeURIComponent(encoded));
 
 console.log(document.location.href);
 console.log(document.title);
+
+var form = window.open("example_getinfo.html");
+console.log(form);
