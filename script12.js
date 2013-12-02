@@ -111,3 +111,11 @@ newParagraph.replaceChild(document.createTextNode("lousy "),
 
 
 newParagraph.removeChild(newParagraph.childNodes[1]);
+
+
+function removeElement(node) {
+  if (node.parentNode)
+    node.parentNode.removeChild(node);
+}
+
+removeElement(newParagraph);
