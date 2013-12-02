@@ -100,3 +100,7 @@ var newParagraph =
           "link"),
       " inside of it.");
 document.documentElement.appendChild(newParagraph);
+
+
+var link = newParagraph.childNodes[1];
+newParagraph.insertBefore(dom("STRONG", null, "great "), link);
