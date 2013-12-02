@@ -119,3 +119,38 @@ function removeElement(node) {
 }
 
 removeElement(newParagraph);
+
+
+function forEach(array, action) {
+  var len = array.length;
+  try {
+    for (var i = 0; i < len; i++)
+      action(array[i]);
+  }
+  catch(e) {
+    if (e != Break)
+      throw e;
+  }
+}
+
+function makeTable(data, columns) {
+  var headRow = dom("TR");
+  forEach(columns, function(name) {
+    headRow.appendChild(dom("TH", null, name));
+  });
+
+  var body = dom("TBODY", null, headRow);
+  forEach(data, function(object) {
+    var row = dom("TR");
+    forEach(columns, function(name) {
+      row.appendChild(dom("TD", null, String(object[name])));
+    });
+    body.appendChild(row);
+  });
+
+  return dom("TABLE", null, body);
+}
+
+var table = makeTable(document.documentElement.childNodes,
+                      ["nodeType", "tagName"]);
+document.documentElement.appendChild(table);
