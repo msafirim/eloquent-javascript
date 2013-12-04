@@ -82,6 +82,99 @@ var blockQ = addHandler(document.getElementById("textfield"), "keypress", functi
 });
 
 
+var sokobanLevels = [
+  {field: ["######  ##### ",
+           "#    #  #   # ",
+           "# 0  #### 0 # ",
+           "# 0 @    0  # ",
+           "#  #######0 # ",
+           "####   ### ###",
+           "       #     #",
+           "       #0    #",
+           "       # 0   #",
+           "      ## 0   #",
+           "      #*0 0  #",
+           "      ########"],
+   boulders: 10},
+  
+  {field: ["###########   ",
+           "#    #    #   ",
+           "#  00#00 @#   ",
+           "#     0   #   ",
+           "#    #    #   ",
+           "## #########  ",
+           "#  0 #     #  ",
+           "# 00 #0 0 0#  ",
+           "#  0     0 #  ",
+           "# 000#0  0 ###",
+           "#    #  0 0 *#",
+           "##############"],
+   boulders: 20},
+                                         
+  {field: ["##########    ",
+           "#@      *#    ",
+           "#       ##    ",
+           "####### ######",
+           " #           #",
+           " # 0 0 0 0 0 #",
+           "######## #####",
+           "#   0 0  0 0 #",
+           "#   0        #",
+           "##### ########",
+           " #  0 0 0   # ",
+           " #     0    # ",
+           " # 0 0   0 ## ",
+           "####### ####  ",
+           "#  0     #    ",
+           "#        #    ",
+           "#   ######    ",
+           "#####         "],
+   boulders: 16},
+
+  {field: [" ####         ",
+           "## @########  ",
+           "#          #  ",
+           "# 0#####0# #  ",
+           "#  #   # 0 #  ",
+           "# 0 0    0##  ",
+           "# 0  0  #  #  ",
+           "# ####0 ## #  ",
+           "#  0   0 # ## ",
+           "# ###0#   0 ##",
+           "#   #  0# 0 *#",
+           "#  0      ####",
+           "#####  #  #   ",
+           "    #######   "],
+   boulders: 12},
+
+  {field: ["######    #####",
+           "#  #*##  ##   #",
+           "#     #### 0  #",
+           "# 00  #  #  0 #",
+           "##  00#   00 ##",
+           " #0  0   #0  # ",
+           " # 00 #  #  0# ",
+           " # 0 0#### 0 # ",
+           " #       #  ## ",
+           " #### 0  # ##  ",
+           "    ### ## #   ",
+           "     # 0   #   ",
+           "     #@ #  #   ",
+           "     #######   "],
+   boulders: 18}];
+
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+Point.prototype.add = function(other) {
+  return new Point(this.x + other.x, this.y + other.y);
+};
+Point.prototype.isEqualTo = function(other) {
+  return this.x == other.x && this.y == other.y;
+};
+
+
 function clone(object) {
   function OneShotConstructor(){}
   OneShotConstructor.prototype = object;
@@ -188,7 +281,7 @@ var SokobanField = {
 };
 
 var testField = SokobanField.create(sokobanLevels[0]);
-console.log(testField.getSquare(new Point(10, 2)).content);
+//console.log(testField.getSquare(new Point(10, 2)).content);
 
 
 SokobanField.move = function(direction) {
@@ -215,3 +308,4 @@ SokobanField.move = function(direction) {
     this.playerPos = targetPos;
   }
 };
+
