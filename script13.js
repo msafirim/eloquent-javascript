@@ -15,3 +15,19 @@ function unregisterEventHandler(node, event, handler) {
   else
     node.detachEvent("on" + event, handler);
 }
+
+
+function reportClick(event) {
+  event = event || window.event;
+  var target = event.target || event.srcElement;
+  var pageX = event.pageX, pageY = event.pageY;
+  if (pageX == undefined) {
+    pageX = event.clientX + document.body.scrollLeft;
+    pageY = event.clientY + document.body.scrollTop;
+  }
+
+  print("Mouse clicked at ", pageX, ", ", pageY,
+        ". Inside element:");
+  console.log(target);
+}
+registerEventHandler(document, "click", reportClick);
