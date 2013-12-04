@@ -1,8 +1,8 @@
 function registerEventHandler(node, event, handler) {
-  if (typeof node.addEventListener == "function")
-    node.addEventListener(event, handler, false);
-  else
-    node.attachEvent("on" + event, handler);
+ // if (typeof node.addEventListener == "function")
+ //   node.addEventListener(event, handler, false);
+ // else
+ //   node.attachEvent("on" + event, handler);
 }
 
 registerEventHandler(document.getElementById("button"), "click",
@@ -76,7 +76,62 @@ function removeHandler(object) {
   unregisterEventHandler(object.node, object.type, object.handler);
 }
 
-var blockQ = addHandler($("textfield"), "keypress", function(event) {
+var blockQ = addHandler(document.getElementById("textfield"), "keypress", function(event) {
   if (event.character.toLowerCase() == "q")
     event.stop();
 });
+
+
+function clone(object) {
+  function OneShotConstructor(){}
+  OneShotConstructor.prototype = object;
+  return new OneShotConstructor();
+}
+
+Object.prototype.create = function() {
+  var object = clone(this);
+  if (typeof object.construct == "function")
+    object.construct.apply(object, arguments);
+  return object;
+};
+
+var Square = {
+  construct: function(character, tableCell) {
+    this.background = "empty";
+    if (character == "#")
+      this.background = "wall";
+    else if (character == "*")
+      this.background = "exit";
+
+    this.tableCell = tableCell;
+    this.tableCell.className = this.background;
+
+    this.content = null;
+    if (character == "0")
+      this.content = "boulder";
+    else if (character == "@")
+      this.content = "player";
+
+    if (this.content != null) {
+      var image = dom("IMG", {src: "img/sokoban/" +
+                                   this.content + ".gif"});
+      this.tableCell.appendChild(image);
+    }
+  },
+
+  hasPlayer: function() {
+    return this.content == "player";
+  },
+  hasBoulder: function() {
+    return this.content == "boulder";
+  },
+  isEmpty: function() {
+    return this.content == null && this.background == "empty";
+  },
+  isExit: function() {
+    return this.background == "exit";
+  }
+};
+
+var testSquare = Square.create("@", dom("TD"));
+console.log(testSquare.hasPlayer());
