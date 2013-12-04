@@ -146,3 +146,72 @@ Square.clearContent = function() {
   this.content = null;
   removeElement(this.tableCell.lastChild);
 };
+
+
+var SokobanField = {
+  construct: function(level) {
+    var tbody = dom("TBODY");
+    this.squares = [];
+    this.bouldersToGo = level.boulders;
+
+    for (var y = 0; y < level.field.length; y++) {
+      var line = level.field[y];
+      var tableRow = dom("TR");
+      var squareRow = [];
+      for (var x = 0; x < line.length; x++) {
+        var tableCell = dom("TD");
+        tableRow.appendChild(tableCell);
+        var square = Square.create(line.charAt(x), tableCell);
+        squareRow.push(square);
+        if (square.hasPlayer())
+          this.playerPos = new Point(x, y);
+      }
+      tbody.appendChild(tableRow);
+      this.squares.push(squareRow);
+    }
+
+    this.table = dom("TABLE", {"class": "sokoban"}, tbody);
+    this.score = dom("DIV", null, "...");
+    this.updateScore();
+  },
+
+  getSquare: function(position) {
+    return this.squares[position.y][position.x];
+  },
+  updateScore: function() {
+    this.score.firstChild.nodeValue = this.bouldersToGo + 
+                                      " boulders to go.";
+  },
+  won: function() {
+    return this.bouldersToGo <= 0;
+  }
+};
+
+var testField = SokobanField.create(sokobanLevels[0]);
+console.log(testField.getSquare(new Point(10, 2)).content);
+
+
+SokobanField.move = function(direction) {
+  var playerSquare = this.getSquare(this.playerPos);
+  var targetPos = this.playerPos.add(direction);
+  var targetSquare = this.getSquare(targetPos);
+
+  // Possibly pushing a boulder
+  if (targetSquare.hasBoulder()) {
+    var pushTarget = this.getSquare(targetPos.add(direction));
+    if (pushTarget.isEmpty()) {
+      targetSquare.moveContent(pushTarget);
+    }
+    else if (pushTarget.isExit()) {
+      targetSquare.moveContent(pushTarget);
+      pushTarget.clearContent();
+      this.bouldersToGo--;
+      this.updateScore();
+    }
+  }
+  // Moving the player
+  if (targetSquare.isEmpty()) {
+    playerSquare.moveContent(targetSquare);
+    this.playerPos = targetPos;
+  }
+};
