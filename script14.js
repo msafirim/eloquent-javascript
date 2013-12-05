@@ -29,3 +29,11 @@ console.log(request.statusText);
 request.open("GET", "script14.js", true);
 request.send(null);
 console.log(request.responseText);
+
+
+request.open("GET", "script14.js", true);
+request.send(null);
+request.onreadystatechange = function() {
+  if (request.readyState == 4)
+    console.log(request.responseText.length);
+};
