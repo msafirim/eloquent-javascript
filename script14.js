@@ -24,3 +24,8 @@ console.log(request.getResponseHeader("Last-Modified"));
 
 console.log(request.status);
 console.log(request.statusText);
+
+
+request.open("GET", "script14.js", true);
+request.send(null);
+console.log(request.responseText);
