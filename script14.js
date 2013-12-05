@@ -37,3 +37,20 @@ request.onreadystatechange = function() {
   if (request.readyState == 4)
     console.log(request.responseText.length);
 };
+
+
+function simpleHttpRequest(url, success, failure) {
+  var request = makeHttpObject();
+  request.open("GET", url, true);
+  request.send(null);
+  request.onreadystatechange = function() {
+    if (request.readyState == 4) {
+      if (request.status == 200)
+        success(request.responseText);
+      else if (failure)
+        failure(request.status, request.statusText);
+    }
+  };
+}
+
+simpleHttpRequest("script14.js", console.log);
