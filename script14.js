@@ -16,3 +16,7 @@ var request = makeHttpObject();
 request.open("GET", "script14.js", false);
 request.send(null);
 console.log(request.responseText);
+
+
+console.log(request.getAllResponseHeaders());
+console.log(request.getResponseHeader("Last-Modified"));
